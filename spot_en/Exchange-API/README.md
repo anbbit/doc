@@ -1,4 +1,4 @@
-# Perpetual Exchange API
+# Exchange API
 
 ## API Description
 
@@ -85,7 +85,3 @@ The default maximum number of requests is 100 in 10 seconds.
 ## Public API
 
 Reference [Public-Interface.md](./Public-Interface.md)
-
-## Private API
-
-Reference [Private-Interface.md](./Private-Interface.md)

@@ -15,11 +15,11 @@
 | 名称 | 类型 | 必填 | 说明 |
 | --- | :---: | :---: | :--- |
 | symbol | STRING | 是 | 交易对名称，通过交易对列表获取支持的交易对 |
-| level | STRING | 是 | 交易级别，当前仅支持ALL, 其他将被支持的级别L20、L50 |
+| level | STRING | 是 | 交易级别，当前支持的级别L20、L50 |
 
 ### 示例
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT_P/ALL
+    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT_P/L20
 
 ```json
 {

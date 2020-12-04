@@ -31,7 +31,7 @@ Document | Description
 [现货交易](./spot/Exchange-API/README.md) | 现货交易接口说明文档
 [现货行情查询](./spot/Market-Data-API/README.md) | 现货行情查询说明文档
 [现货行情订阅](./spot/WebSocket-API/README.md) | 现货行情订阅说明文档
-[合约公开接口](./perpetual/Exchange-API/Public-Interface.md) | 合约交易接口说明文档
+[合约公开接口](./perpetual/Exchange-API/Public-Interface.md) | 合约公开接口说明文档
 [合约交易](./perpetual/Exchange-API/README.md) | 合约交易接口说明文档
 [合约行情查询](./perpetual/Market-Data-API/README.md) | 合约行情查询说明文档
 [合约行情订阅](./perpetual/WebSocket-API/README.md) | 合约行情订阅说明文档

@@ -7,9 +7,11 @@
 
 Document | Description
 --- | --- 
+[Spot Public API](./spot_en/Exchange-API/Public-Interface.md) | Spot Public API Document
 [Spot Exchange API](./spot_en/Exchange-API/README.md) | Spot Exchange API Document
 [Spot Market API](./spot_en/Market-Data-API/README.md) | Spot Market API Document
 [Spot Market Websocket](./spot_en/WebSocket-API/README.md) | Spot Market Websocket Document
+[Perpetual Public API](./perpetual_en/Exchange-API/Public-Interface.md) | Perpetual Public API Document
 [Perpetual Exchange API](./perpetual_en/Exchange-API/README.md) | Perpetual Exchange API Document
 [Perpetual Market API](./perpetual_en/Market-Data-API/README.md) | Perpetual Market API Document
 [Perpetual Market Websocket](./perpetual_en/WebSocket-API/README.md) | Perpetual Market Websocket Document
@@ -25,9 +27,11 @@ Document | Description
 
 文档 | 说明
 --- | --- 
+[现货公开接口](./spot/Exchange-API/Public-Interface.md) | 现货公开接口说明文档
 [现货交易](./spot/Exchange-API/README.md) | 现货交易接口说明文档
 [现货行情查询](./spot/Market-Data-API/README.md) | 现货行情查询说明文档
 [现货行情订阅](./spot/WebSocket-API/README.md) | 现货行情订阅说明文档
+[合约公开接口](./perpetual/Exchange-API/Public-Interface.md) | 合约交易接口说明文档
 [合约交易](./perpetual/Exchange-API/README.md) | 合约交易接口说明文档
 [合约行情查询](./perpetual/Market-Data-API/README.md) | 合约行情查询说明文档
 [合约行情订阅](./perpetual/WebSocket-API/README.md) | 合约行情订阅说明文档

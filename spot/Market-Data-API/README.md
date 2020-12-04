@@ -21,7 +21,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/aggTrades?symbol=BTCUSDT
 
-```json
+```
 [
     {
         "a": 26129,         // 归集成交ID
@@ -51,7 +51,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/depth?symbol=BTCUSDT
 
-```json
+```
 {
   "lastUpdateId": 1027024,
   "bids": [
@@ -81,7 +81,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/ticker/24hr
 
-```json
+```
 [
   {
     "symbol": "BNBBTC",
@@ -113,7 +113,7 @@
 
 ### 参数说明
 
-| 名称 | 类型 ｜ 必填 | 说明 |
+| 名称 | 类型 | 必填 | 说明 |
 | --- | ---: | :---: | :--- |
 | symbol | STRING | 是 | 交易对名称，通过交易对列表获取支持的交易对 |
 | interval | STRING | 是 | 间隔，当前支持1m、3m、5m、15m、30m、<br>1h、2h、4h、6h、8h、12h、1d、3d、1w、1M |
@@ -125,7 +125,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=10
 
-```json
+```
 [
     [
         1499040000000,      // 开盘时间

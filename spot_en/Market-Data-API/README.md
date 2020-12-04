@@ -21,7 +21,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/aggTrades?symbol=BTCUSDT
 
-```json
+```
 [
     {
         "a": 26129,         // Aggregate tradeId
@@ -51,7 +51,7 @@
 
     GET https://market.anbbit.com/bitan/api/v3/depth?symbol=BTCUSDT
 
-```json
+```
 {
   "lastUpdateId": 1027024,
   "bids": [
@@ -75,13 +75,13 @@
 
 ### Parameters
 
-Null.
+null.
 
 ### Sample
 
     GET https://market.anbbit.com/bitan/api/v3/ticker/24hr
 
-```json
+```
 [
   {
     "symbol": "BNBBTC",
@@ -125,7 +125,7 @@ Null.
 
     GET https://market.anbbit.com/bitan/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=10
 
-```json
+```
 [
     [
         1499040000000,      // Open time

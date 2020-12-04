@@ -39,7 +39,7 @@
 * ordbk_type: d-diff, f-full
 * Response
 
-    ```json
+    ```
     {
         "asks":[
             19436.89,   // Price level to be updated
@@ -64,7 +64,7 @@
 
 * Response
 
-    ```json
+    ```
     {
         "trade_id":"d647021833ca11eba55c06258d30ec96",
         "side":"buy",
@@ -79,7 +79,7 @@
 
 * Response
 
-    ```json
+    ```
     {
         "type":"ticker.BTC_USDT_P",
         "seq":6907,
@@ -103,7 +103,7 @@
 
 * Response
 
-    ```json
+    ```
     {
         "data":[
             {

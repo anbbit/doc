@@ -15,18 +15,18 @@
 | 名称 | 类型 | 必填 | 说明 |
 | --- | :---: | :---: | :--- |
 | symbol | STRING | 是 | 交易对名称，通过交易对列表获取支持的交易对 |
-| level | STRING | 是 | 交易级别，当前支持的级别L20、L50 |
+| level | STRING | 是 | 交易级别，支持的级别：L20、L50 |
 
 ### 示例
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT_P/L20
+    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT_P/ALL
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
     "data": {
-        "type": "depth.L20.BTC_USDT",
+        "type": "depth.L20.BTC_USDT_P",
         "symbol": "BTC_USDT_P",
         "ts": 1572490711353,  // 时间戳
         "seq": 1572448705737, // 序号
@@ -60,7 +60,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/trade/BTC_USDT_P
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
@@ -71,13 +71,6 @@
             "price": 10060.4,
             "qty": 0.001,
             "ts": 1572490711353
-        },
-        {
-            "trade_id": "dc84492cfb2e11e9b84c02a7107ba21a",
-            "side": "sell",
-            "price": 10060.0,
-            "qty": 0.01,
-            "ts": 1572451429823
         }
     ]
 }
@@ -97,12 +90,12 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/ticker/BTC_USDT_P
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
     "data": {
-        "symbol": "BTC_USDT",
+        "symbol": "BTC_USDT_P",
         "seq": 25,
         "ticker": [
             14000.0,   // 最新一笔成交的成交价
@@ -127,8 +120,8 @@
 
 ### 参数说明
 
-| 名称 | 类型 ｜ 必填 | 说明 |
-| --- | ---: | :---: | :--- |
+| 名称 | 类型 | 必填 | 说明 |
+| --- | :---: | :---: | :--- |
 | symbol | STRING | 是 | 交易对名称，通过交易对列表获取支持的交易对 |
 | interval | STRING | 是 | 间隔，当前支持1m、3m、5m、15m、30m、<br>1h、2h、4h、6h、8h、12h、1d、3d、1w、1M |
 | begin | INT | 是 | 起始时间戳，单位：秒 |
@@ -138,7 +131,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/kline/BTC_USDT_P/1m?begin=1572492685&end=1572499129
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",

@@ -26,8 +26,8 @@
     "status": 0,
     "msg": "ok",
     "data": {
-        "type": "depth.ALL.BTC_USDT",
-        "symbol": "BTC_USDT",
+        "type": "depth.L20.BTC_USDT",
+        "symbol": "BTC_USDT_P",
         "ts": 1572490711353,  // 时间戳
         "seq": 1572448705737, // 序号
         "asks": [

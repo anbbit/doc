@@ -21,7 +21,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT/ALL
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
@@ -60,7 +60,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/trade/BTC_USDT
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
@@ -97,7 +97,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/ticker/BTC_USDT
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",
@@ -138,7 +138,7 @@
 
     GET https://market.anbbit.com/api/swap/v1/public/market/kline/BTC_USDT/1m?begin=1572492685&end=1572499129
 
-```json
+```
 {
     "status": 0,
     "msg": "ok",

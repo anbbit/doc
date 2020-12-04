@@ -14,7 +14,7 @@
 
 * 响应
 
-    ```json
+    ```
     [
         {
             "symbol": "BTC_USDT_P", 
@@ -27,7 +27,7 @@
             "unrealized_pnl": 0,                    // 未实现盈亏
             "realized_pnl": 0,                      // 已实现盈亏
             "transfer_balance": 11161897.76919204,  // 可划转余额
-            "margin_rate": None,                    // 保证金率
+            "margin_rate": null,                    // 保证金率
             "maint_margin_rate": 0.3283,            // 维持保证金率
             "init_margin_rate": 0.3333,             // 初始保证金率
             "long_leverage": 10.0,                  // 多仓杠杠
@@ -52,7 +52,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "symbol": "BTC_USDT_P", 
         "mode": "cross",   // 仓位模式，crossed-全仓，fixed-逐仓
@@ -64,7 +64,7 @@
         "unrealized_pnl": 0,                     // 未实现盈亏
         "realized_pnl": 0,                       // 实现盈亏
         "transfer_balance": 11161897.76919204,   // 可划转余额
-        "margin_rate": None,                     // 保证金率
+        "margin_rate": null,                     // 保证金率
         "maint_margin_rate": 0.045,              // 维持保证金率
         "init_margin_rate": 0.05,                // 初始保证金率
         "long_leverage": 10.0,                   // 多仓杠杠
@@ -90,7 +90,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // 订单id
         "state": "submitted"    // 订单状态：
@@ -119,7 +119,7 @@
 
 * 响应
 
-    ```json
+    ```
     [
         {
             "position_id": 243, 
@@ -141,7 +141,7 @@
             "bankrupt_price": 0.0,               // 破产价格
             "amount": 317214.0101578,            // 开仓金额
             "mark_value": 43178.42646366,        // 持仓价值
-            "margin_rate": None                  // 保证金率
+            "margin_rate": null                  // 保证金率
         }
     ]
     ```
@@ -165,7 +165,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // 订单id
         "state": "submitted"  // 订单状态
@@ -198,7 +198,7 @@
 
         POST /api/swap/v1/private/order/create/batch
 
-    ```json
+    ```
     {
         "symbol": "BTC_USDT_P",
         "account_type": "swap",
@@ -217,7 +217,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "result": [
             {
@@ -243,7 +243,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "user_id": 1,                     // 用户id
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // 订单id
@@ -279,7 +279,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // 订单id
         "state": "pending_cancel"  // 订单状态
@@ -300,7 +300,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "state": "pending_cancel"  // 订单状态
     }
@@ -321,7 +321,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "result": [
             {
@@ -354,7 +354,7 @@
 
 * 响应
 
-    ```json
+    ```
     [
         {
             "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17", 
@@ -367,7 +367,7 @@
             "margin": 100.77049,            // 保证金
             "order_margin": 100.77049,      // 订单保证金
             "leverage": 10.0,               // 杠杆倍率
-            "is_plan": False,               // 是否为计划委托
+            "is_plan": false,               // 是否为计划委托
             "trigger_price": 0.0,           // 触发价格
             "state": "submitted",           // 订单状态
             "amount": 1000.7,               // 划转金额
@@ -409,7 +409,7 @@
 
 * 响应
 
-    ```json
+    ```
     [
         {
             "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17", 
@@ -422,7 +422,7 @@
             "margin": 100.77049,            // 保证金
             "order_margin": 100.77049,      // 订单保证金
             "leverage": 10.0,               // 杠杆倍率
-            "is_plan": False,               // 是否为计划委托
+            "is_plan": false,               // 是否为计划委托
             "trigger_price": 0.0,           // 触发价格
             "state": "submitted",           // 订单状态
             "amount": 1000.7,               // 划转金额
@@ -460,7 +460,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "total": 9215,    // 查询结果总条数
         "page": 1,        // 当前页
@@ -471,8 +471,8 @@
                 "trade_type": "openshort",  // 交易类型
                 "qty": 0.001,               // 划转数量
                 "price": 10969.5,           // 委托价格
-                "is_maker": True,           // 是否挂单
-                "is_buy_maker": False,      // 是否买入挂单
+                "is_maker": true,           // 是否挂单
+                "is_buy_maker": false,      // 是否买入挂单
                 "amount_fee": -0.0021939,   // 划转金额手续费
                 "qty_fee": 0.0,             // 划转数量手续费
                 "realized_pnl": 0.0,        // 实现盈亏
@@ -496,7 +496,7 @@
 
 * 响应
 
-    ```json
+    ```
     {
         "symbol": "BTC_USDT_P", 
         "currency": "USDT",                 // 币种
@@ -524,7 +524,7 @@
 
 * 响应
 
-    ```json
+    ```
     [
         {
             "symbol": "BTC_USDT_P", 

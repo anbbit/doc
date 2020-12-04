@@ -14,7 +14,7 @@
         "msg": "ok",
         "data": [
             {
-                "symbol": "BTC_USDT",
+                "symbol": "BTC_USDT_P",
                 "price_decimal": 2,             // price precision
                 "qty_decimal": 4,               // quantity precision
                 "state": 2,                     // symbol state
@@ -26,37 +26,6 @@
                 "is_main": true,
                 "is_index": false,
                 "is_innovate": false
-            }
-        ]
-    }
-    ```
-
-## Currency list
-
-* Request
-
-        GET /api/swap/v1/public/currency/list
-
-* Response
-
-    ```
-    {
-        "status": 0,
-        "msg": "ok",
-        "data": [
-            {
-                "currency": "ETH",
-                "chain_name": "ETH",
-                "full_name": "ETH",
-                "is_memo_support": 0,          // 0-no, 1-yes
-                "min_withdraw_amount": 0.0001,
-                "min_deposit_amount": 0.0001,
-                "withdraw_fee": 0.0001,
-                "exchange_confirm": 12,
-                "withdraw_confirm": 12,
-                "decimal": 18,      // precision on the chain
-                "is_depositable": 1,
-                "is_withdrawable": 1
             }
         ]
     }
@@ -81,10 +50,7 @@
         "status": 0,
         "msg": "ok",
         "data": {
-            "symbol": "PT05_USDT",
-            "index_price": 0.7899,
-            "timestamp_ms": 1587903200000,
-            "reference_weight": null  // Currenct return null
+            "index_price": 19345.9567
         }
     }
     ```

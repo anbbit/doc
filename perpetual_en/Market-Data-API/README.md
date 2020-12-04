@@ -15,19 +15,19 @@
 | Name | Type | Mandatory | Description |
 | --- | :---: | :---: | :--- |
 | symbol | STRING | YES | Get the valid symbol list from **Symbol list endpoint** |
-| level | STRING | YES | Order book depth, valid: ALL, valid in future: L20、L50 |
+| level | STRING | YES | Order book depth, valid list: L20, L50 |
 
 ### Sample
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT/ALL
+    GET https://market.anbbit.com/api/swap/v1/public/market/orderbook/BTC_USDT/L20
 
 ```
 {
     "status": 0,
     "msg": "ok",
     "data": {
-        "type": "depth.ALL.BTC_USDT",
-        "symbol": "BTC_USDT",
+        "type": "depth.L20.BTC_USDT_P",
+        "symbol": "BTC_USDT_P",
         "ts": 1572490711353,  // Timestamp in ms
         "seq": 1572448705737,
         "asks": [
@@ -58,7 +58,7 @@
 
 ### Sample
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/trade/BTC_USDT
+    GET https://market.anbbit.com/api/swap/v1/public/market/trade/BTC_USDT_P
 
 ```
 {
@@ -71,13 +71,6 @@
             "price": 10060.4,
             "qty": 0.001,
             "ts": 1572490711353
-        },
-        {
-            "trade_id": "dc84492cfb2e11e9b84c02a7107ba21a",
-            "side": "sell",
-            "price": 10060.0,
-            "qty": 0.01,
-            "ts": 1572451429823
         }
     ]
 }
@@ -95,14 +88,14 @@
 
 ### Sample
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/ticker/BTC_USDT
+    GET https://market.anbbit.com/api/swap/v1/public/market/ticker/BTC_USDT_P
 
 ```
 {
     "status": 0,
     "msg": "ok",
     "data": {
-        "symbol": "BTC_USDT",
+        "symbol": "BTC_USDT_P",
         "seq": 25,
         "ticker": [
             14000.0,   // Last price
@@ -136,7 +129,7 @@
 
 ### Sample
 
-    GET https://market.anbbit.com/api/swap/v1/public/market/kline/BTC_USDT/1m?begin=1572492685&end=1572499129
+    GET https://market.anbbit.com/api/swap/v1/public/market/kline/BTC_USDT_P/1m?begin=1572492685&end=1572499129
 
 ```
 {

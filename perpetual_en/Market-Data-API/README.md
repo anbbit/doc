@@ -145,7 +145,7 @@
     "data": [
         {
             "id": 1572498120,      // Kline start time
-            "seq": 10,             // Number of trades
+            "seq": 10,             // Seq of Stream
             "high": 14000.0,       // High price
             "low": 10060.5,        // Low price
             "open": 10060.5,       // Open price

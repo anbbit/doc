@@ -86,3 +86,6 @@ ret = requests.post(url, json=None, data=params_str, headers=headers, cookies=No
 
 参考 [Public-Interface.md](./Public-Interface.md)
 
+## 私密接口
+
+参考 [Private-Interface.md](./Private-Interface.md)

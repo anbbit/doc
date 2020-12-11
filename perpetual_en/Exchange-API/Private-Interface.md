@@ -1,8 +1,8 @@
 # Private API
 
-Infomation of perpetual order, include query account, operate order, query order, query billing details.
+Information of perpetual order, include query account, operate order, query order, query billing details.
 
-## Query Account Infomation
+## Query Account Information
 
 * Request
 

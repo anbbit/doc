@@ -23,7 +23,6 @@
             "avail_margin": 11161897.76919204,      // 可用保证金
             "position_margin": 0,                   // 持仓保证金
             "order_margin": 0.0,                    // 挂单冻结保证金
-            "frozen_margin": 1278.64010481344,      // 挂单冻结保证金
             "unrealized_pnl": 0,                    // 未实现盈亏
             "realized_pnl": 0,                      // 已实现盈亏
             "transfer_balance": 11161897.76919204,  // 可划转余额
@@ -60,7 +59,6 @@
         "avail_margin": 11161897.76919204,       // 可用保证金
         "position_margin": 0,                    // 持仓保证金
         "order_margin": 1278.64010481344,        // 挂单保证金
-        "frozen_margin": 1278.64010481344,       // 挂单冻结保证金
         "unrealized_pnl": 0,                     // 未实现盈亏
         "realized_pnl": 0,                       // 实现盈亏
         "transfer_balance": 11161897.76919204,   // 可划转余额
@@ -501,7 +499,6 @@
         "currency": "USDT",                 // 币种
         "avail_margin": 11161897.76919204,  // 可用保证金
         "order_margin": 0.0,                // 订单保证金
-        "frozen_margin": 1278.64010481,     // 已冻结保证金
         "balance": 11163176.40929685,       // 总余额
         "float": 8,                         // 显示精度
         "long_leverage": 10.0,              // 多仓杠杆倍数
@@ -530,7 +527,6 @@
             "currency": "USDT",                 // 币种
             "avail_margin": 11161897.76919204,  // 可用保证金
             "order_margin": 0.0,                // 订单保证金
-            "frozen_margin": 1278.64010481,     // 已冻结保证金
             "balance": 11163176.40929685,       // 总余额
             "float": 8,                         // 显示精度
             "long_leverage": 10.0,              // 多仓杠杆倍数

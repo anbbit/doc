@@ -2,6 +2,44 @@
 
 Information of perpetual order, include query account, operate order, query order, query billing details.
 
+## Dictionary
+
+### Order State
+
+	pending_submit
+	submitted
+	partial_filled
+	partial_canceled
+	filled
+	canceled
+	pending_cancel
+	sys_canceled
+
+	trigger_pending
+	trigger_failed
+	trigger_canceled
+	trigger_success
+	trigger_inactive
+	trigger_expired
+
+### Position Direction
+	long
+	short
+
+### Trade Type
+	openlong
+	openshort
+	closeshort
+	closelong
+
+### Order Type (Order Price Type)
+	limit
+	market
+
+### Account Mode
+	cross
+	isolate
+
 ## Query Account Information
 
 * Request
@@ -18,7 +56,7 @@ Information of perpetual order, include query account, operate order, query orde
     [
         {
             "symbol": "BTC_USDT_P", 
-            "mode": "cross",    // position mode: crossed, fixed
+            "mode": "cross",    // Account mode: cross, isolate
             "account_value": 11163176.409296853,
             "avail_margin": 11161897.76919204,      // available margin
             "position_margin": 0,
@@ -93,15 +131,7 @@ Information of perpetual order, include query account, operate order, query orde
     ```
     {
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // Order id
-        "state": "submitted"    // Order state:
-                                // pending_submit,
-                                // submitted,
-                                // partial_filled,
-                                // partial_canceled,
-                                // filled,
-                                // canceled,
-                                // pending_cancel,
-                                // sys_canceled
+        "state": "submitted"    // Order state
     }
     ```
 
@@ -123,7 +153,7 @@ Information of perpetual order, include query account, operate order, query orde
     [
         {
             "position_id": 243, 
-            "mode": "cross",  // Position mode: crossed, fixed
+            "mode": "cross",  // Account mode: cross, isolate
             "symbol": "BTC_USDT_P", 
             "position_margin": 4317.842646366,
             "init_margin": 31721.40101578,
@@ -200,7 +230,7 @@ Information of perpetual order, include query account, operate order, query orde
         "account_type": "swap",
         "orders": [
             {
-                "cid": "cid_2ccbdd58d5fa11ea943b00f48dd430da",
+                "cid": "cid_2ccb3b00f48dd430da",
                 "qty": 0.1, 
                 "price": 10000,
                 "trade_type": "openlong",
@@ -503,7 +533,7 @@ Information of perpetual order, include query account, operate order, query orde
         "float": 8,                  // precision
         "long_leverage": 10.0, 
         "short_leverage": 10.0,
-        "mode": "crossed",       // Position mode: crossed, fixed
+        "mode": "cross",       // Account mode
         "equal_btc": 1011.45962192          // Balance equal to btc
     }
     ```
@@ -532,7 +562,7 @@ Information of perpetual order, include query account, operate order, query orde
             "float": 8,               // precision
             "long_leverage": 10.0, 
             "short_leverage": 10.0, 
-            "mode": 0,         // Position mode: crossed, fixed
+            "mode": "cross",         // Account mode
             "equal_btc": 1011.45962192          // Balance equal to btc
         }
     ]

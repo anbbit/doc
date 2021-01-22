@@ -2,6 +2,46 @@
 
 合约交易相关的信息，包括账户信息，订单操作，订单查询，账单明细查询。
 
+## 字典
+
+### 订单状态
+
+	委托状态列表：
+	pending_submit    // 下单已接收
+	submitted         // 已提交, 待成交
+	partial_filled    // 部分成交
+	partial_canceled  // 部分成交已撤销
+	filled            // 完全成交
+	canceled          // 已撤销
+	pending_cancel    // 撤销已提交
+	sys_canceled      // canceled by system
+
+	止盈止损状态列表：
+	trigger_pending   // 订单正在等待触发
+	trigger_failed    // 订单被触发，但执行失败（例如：冻结失败）
+	trigger_canceled  // 订单未被触发而取消
+	trigger_success   // 订单触发成功
+	trigger_inactive  // 订单未激活，不会触发
+	trigger_expired   // 订单已失效（没有持仓、等情况）
+
+### 开仓方向 direction
+	long  // 多
+	short // 空
+
+### 交易类型 trade_type
+	openlong    // 买入开多
+	openshort   // 卖出开空
+	closeshort  // 买入平空
+	closelong   // 卖出平多
+
+### 订单类型（报价类型）
+	limit   // 限价
+	market  // 市价
+
+### 仓位模式
+	cross    // 全仓
+	isolate  // 逐仓
+
 ## 获取当前账户信息
 
 * 请求
@@ -18,7 +58,7 @@
     [
         {
             "symbol": "BTC_USDT_P", 
-            "mode": "cross",    // 仓位模式，crossed-全仓，fixed-逐仓
+            "mode": "cross",                        // 仓位模式
             "account_value": 11163176.409296853,    // 账户权益
             "avail_margin": 11161897.76919204,      // 可用保证金
             "position_margin": 0,                   // 持仓保证金
@@ -54,7 +94,7 @@
     ```
     {
         "symbol": "BTC_USDT_P", 
-        "mode": "cross",   // 仓位模式，crossed-全仓，fixed-逐仓
+        "mode": "cross",                         // 仓位模式
         "account_value": 11163176.409296853,     // 账户权益
         "avail_margin": 11161897.76919204,       // 可用保证金
         "position_margin": 0,                    // 持仓保证金
@@ -91,15 +131,7 @@
     ```
     {
         "order_id": "3.BTC_USDT_P.0.f3c5c3ba08e40d17",  // 订单id
-        "state": "submitted"    // 订单状态：
-                                // pending_submit-提交中，
-                                // submitted-已提交，
-                                // partial_filled-部分成交，
-                                // partial_canceled-部分撤销，
-                                // filled-完全成交，
-                                // canceled-已撤销，
-                                // pending_cancel-撤销中，
-                                // sys_canceled-系统撤销
+        "state": "submitted"    // 订单状态
     }
     ```
 
@@ -121,7 +153,7 @@
     [
         {
             "position_id": 243, 
-            "mode": "cross",  // 仓位模式，crossed-全仓，fixed-逐仓
+            "mode": "cross",                     // 仓位模式
             "symbol": "BTC_USDT_P", 
             "position_margin": 4317.842646366,   // 持仓保证金
             "init_margin": 31721.40101578,       // 初始保证金
@@ -130,7 +162,7 @@
             "realized_pnl": 0.0,                 // 已实现盈亏
             "pnl_rate": -8.638823473081134,      // 盈亏率
             "leverage": 10.0,                    // 杠杆倍率
-            "direction": "long",    // 持仓方向，long-做多，short-做空
+            "direction": "long",                 // 持仓方向
             "qty": 3.927579,                     // 持仓数量
             "avail_qty": 3.927579,               // 可用数量
             "mark_price": 10993.64938647,        // 标记价格
@@ -202,7 +234,7 @@
         "account_type": "swap",
         "orders": [
             {
-                "cid": "cid_2ccbdd58d5fa11ea943b00f48dd430da",  // 用户自定义订单ID
+                "cid": "cid_0f48dd430da",  // 用户自定义订单ID
                 "qty": 0.1,                // 下单数量
                 "price": 10000,            // 委托价格
                 "trade_type": "openlong",  // 交易类型
@@ -503,7 +535,7 @@
         "float": 8,                         // 显示精度
         "long_leverage": 10.0,              // 多仓杠杆倍数
         "short_leverage": 10.0,             // 空仓杠杆倍数
-        "mode": "crossed",       // 仓位模式：crossed-全仓，fixed-逐仓
+        "mode": "cross",                    // 仓位模式
         "equal_btc": 1011.45962192          // 余额转btc
     }
     ```
@@ -531,7 +563,7 @@
             "float": 8,                         // 显示精度
             "long_leverage": 10.0,              // 多仓杠杆倍数
             "short_leverage": 10.0,             // 空仓杠杆倍数
-            "mode": 0,          // 仓位模式：crossed-全仓，fixed-逐仓
+            "mode": "cross",                    // 仓位模式
             "equal_btc": 1011.45962192          // 余额转btc
         }
     ]
